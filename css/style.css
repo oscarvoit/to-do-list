@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root {
+    --color-primary: #b0b6a9;
+    --color-secundary: #2a3830;
+    --color-third: #fdf0b9;
+    --color-fourth: rgb(1, 155, 194);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.todolist {
+    width: 100%;
+    max-width: 500px;
+}
+.todolist header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+    background-color: var(--color-secundary);
+    color: black;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.todolist footer {
+    background-color: var(--color-third);
+    
+}
+
+.todolist footer input {
+    background-color: var(--color-third);
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 20px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 1.2em;
+    color: black;
+}
+
+.wrapper-list ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-list ul.list li {
+    background-color: var(--color-third);
+    border-bottom: 1px solid var(--color-fourth);
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    transition: background-color 700ms ease;
+}
+
+.wrapper-list ul.list li.removed {
+    animation: collapseItem 300ms ease;
+}
+
+.wrapper-list ul.list li.hidden {
+    display: none;
+}
+
+.wrapper-list ul.list li:hover {
+    background-color: #fce998;
+}
+
+.wrapper-list ul.list li:hover button.remove {
+    opacity: 1;
+}
+
+.wrapper-list ul.list .check {
+    position: relative;
+    background-color: white;
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.wrapper-list ul.list .check:hover,
+.wrapper-list ul.list .done .check {
+    background-color: black;
+}
+
+.wrapper-list ul.list .done .check:after{
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
+.wrapper-list ul.list .done .task {
+    text-decoration: line-through;
+}
+
+.wrapper-list ul.list button.remove {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: red;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.wrapper-list ul.list button.remove:after {
+    content: 'x';
+    color: white;
+    display: block;
+}
+
+@keyframes collapseItem {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(-90deg);
+    }
+}
