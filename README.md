@@ -15,12 +15,11 @@ O projeto tinha como propósito utilizar apenas HTML, CSS e Javascript puro, con
 
 ## Screenshots
 
-![App Screenshot](https://github.com/oscarvoit/to-do-list/blob/main/img/img1.png)
-![App Screenshot](https://github.com/oscarvoit/to-do-list/blob/main/img/img2.png)
+![App Screenshot](https://github.com/oscarvoit/to-do-list/blob/main/img/Img1.png)
 
 ## Demonstração
 
-![App Screenshot](https://github.com/oscarvoit/to-do-list/blob/main/img/gif-todolist.gif)
+![App Screenshot](https://github.com/oscarvoit/to-do-list/blob/main/img/Gif-atualizado.gif)
 
 ## Autores
 
